@@ -122,6 +122,23 @@ header {
             img {
                 width: 100%;
             }
+
+            .post-card-wrapper {
+                color: $color-gray;
+                text-decoration: none;
+
+                .post-card-wrapper-info {
+                    padding: 20px;
+
+                    h2 {
+                        margin-top: 0;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
         }
     }
 }
