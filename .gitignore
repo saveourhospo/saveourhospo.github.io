@@ -1,0 +1,9 @@
+## Generated
+*.gem
+.DS_Store
+.bundle
+.sass-cache
+Gemfile.lock
+
+## Directories
+_site/

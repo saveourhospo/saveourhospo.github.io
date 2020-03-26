@@ -1,0 +1,11 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.settings.description }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.settings.title }}" href="{{ "/feed.xml" | relative_url }}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+	<link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>{% if page.title %}{{ page.title }} |{% endif %} {{ site.settings.title }}</title>
+</head>

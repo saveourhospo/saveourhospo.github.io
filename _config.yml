@@ -1,0 +1,40 @@
+# Config
+baseurl: ""
+url: "https://saveourhospo.github.io/"
+
+# Page Settings
+settings:
+  title: "SaveOurHospo"
+  description: "Save your favourite Sydney Restaurants, Cafes and Places by buying gift cards"
+  email: "saveourhospo@gmail.com"
+  rss: false
+
+# Social Media Links
+social:
+  instagram: "https://www.instagram.com/cvgellhorn/"
+  twitter: "https://twitter.com/cvgellhorn"
+  github: "https://github.com/saveourhospo/saveourhospo.github.io"
+
+# Translations
+translations:
+  fork_github: "Fork this project on GitHub"
+  follow_instagram: "Follow us on Instagram"
+  follow_twitter: "Follow us on Twitter"
+  subscribe_rss: "Subscribe to our RSS"
+  prev_page: "Previous Page"
+  next_page: "Next Page"
+
+# Pagination
+paginate: 12
+paginate_path: "blog/page:num"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

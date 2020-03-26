@@ -1,0 +1,162 @@
+// Helpers
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Vendors
+@import "vendor/normalize";
+
+body {
+    font-family: $font-stack;
+    font-size: 14px;
+    color: $color-gray;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 36em) {
+    .container {
+        margin: 0 auto;
+        max-width: 540px;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .container {
+        margin: 0 auto;
+        max-width: 720px;
+    }
+}
+
+@media only screen and (min-width: 62em) {
+    .container {
+        margin: 0 auto;
+        max-width: 960px;
+    }
+}
+
+@media only screen and (min-width: 75em) {
+    .container {
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: $color-green;
+    z-index: 9;
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 3.75em;
+
+        a.logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: $color-white;
+            font-size: 1.5em;
+            font-weight: 200;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+    }
+}
+
+.content {
+    background-color: $color-blog-bg;
+    padding-top: 2em;
+
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 0 auto;
+
+        .post-card {
+            position: relative;
+            min-height: 250px;
+            border-radius: 4px;
+            background-color: $color-white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2.25rem;
+            transition: box-shadow 250ms ease;
+            overflow: hidden;
+
+            &:hover,
+            &:focus {
+              border-bottom: 0;
+              box-shadow: 0 2px 40px 0 hsla(232, 8%, 63%, .3);
+            }
+
+            @include breakpoint($md) {
+                width: 48.4375%;
+                margin-right: 3.125%;
+            
+                &:last-of-type,
+                &:nth-child(2n+2) {
+                    margin-right: 0;
+                }
+            }
+            
+            @include breakpoint($xl) {
+                width: 31.25%;
+                margin-right: 3.125%;
+            
+                &:nth-child(2n+2) {
+                    margin-right: 3.125%;
+                }
+            
+                &:last-of-type,
+                &:nth-child(3n+3) {
+                    margin-right: 0;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.about {
+    padding: 2em 0;
+}
+
+footer {
+    padding: 2.8em 0;
+    border-top: 1px solid $color-border-gray;
+    text-align: center;
+    font-size: 0.875rem;
+
+    nav.social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 200px;
+
+        a {
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: $color-gray-light;
+        }
+    }
+}
+
+.not-found {
+    padding: 5em 0;
+    text-align: center;
+
+    p {
+        font-size: 2em;
+        color: $color-gray-light;
+    }
+}
