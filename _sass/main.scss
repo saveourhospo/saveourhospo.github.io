@@ -124,7 +124,7 @@ header {
             }
 
             .post-card-wrapper {
-                color: $color-gray;
+                color: $font-color-light-gray;
                 text-decoration: none;
 
                 .post-card-wrapper-info {
@@ -132,10 +132,17 @@ header {
 
                     h2 {
                         margin-top: 0;
+                        color: $color-gray;
+                    }
+
+                    span {
+                        font-size: 0.875rem;
                     }
 
                     p {
+                        font-size: 1rem;
                         margin-bottom: 0;
+                        line-height: 1.5;
                     }
                 }
             }

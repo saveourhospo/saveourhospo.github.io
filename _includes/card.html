@@ -3,7 +3,7 @@
         <img src="{{ post.image }}" alt="{{ post.title }}">
         <div class="post-card-wrapper-info">
             <h2>{{ post.title }}</h2>
-            <h3>{{ post.address }}</h3>
+            <span>{{ post.address }}</span>
             <p title="{{ post.description }}">{{ post.description | truncate: 280 }}</p>
         </div>
     </a>
