@@ -88,6 +88,7 @@ header {
             margin-bottom: 2.25rem;
             transition: box-shadow 250ms ease;
             overflow: hidden;
+            width: 100%;
 
             &:hover,
             &:focus {
@@ -126,7 +127,7 @@ header {
                 .image-wrapper {
                     position: relative;
                     overflow: hidden;
-                    height: 200px;
+                    height: 180px;
 
                     img {
                         position: absolute;
