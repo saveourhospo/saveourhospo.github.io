@@ -7,6 +7,7 @@ settings:
   title: "SaveOurHospo"
   description: "Save your favourite Sydney Restaurants, Cafes and Places by buying gift cards"
   email: "saveourhospo@gmail.com"
+  img_placeholder: "https://source.unsplash.com/collection/2455617"
   rss: false
 
 # Social Media Links
