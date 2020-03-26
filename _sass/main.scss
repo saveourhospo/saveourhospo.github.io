@@ -119,13 +119,24 @@ header {
                 }
             }
 
-            img {
-                width: 100%;
-            }
-
             .post-card-wrapper {
                 color: $font-color-light-gray;
                 text-decoration: none;
+
+                .image-wrapper {
+                    position: relative;
+                    overflow: hidden;
+                    height: 200px;
+
+                    img {
+                        position: absolute;
+                        display: block;
+                        top: 50%;
+                        left: 0;
+                        width: 100%;
+                        transform: translateY(-50%);
+                    }
+                }
 
                 .post-card-wrapper-info {
                     padding: 20px;
