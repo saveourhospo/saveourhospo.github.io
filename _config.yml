@@ -16,8 +16,6 @@ navigation:
 
 # Social Media Links
 social:
-  instagram: "https://www.instagram.com/cvgellhorn/"
-  twitter: "https://twitter.com/cvgellhorn"
   github: "https://github.com/saveourhospo/saveourhospo.github.io"
 
 # Translations
@@ -33,7 +31,7 @@ translations:
   donate: "Get a Voucher"
   mail_add_business: "Add Venue"
   mail_subject: "New%20Venue%20%5Bnew_venue%5D"
-  mail_body: "%3Cb%3EPlease%20fill%20out%20the%20following%3C%2Fb%3E%0D%0A%0D%0AVenue%20Name%3A%0D%0AAddress%3A%0D%0ADonation%20Link%20or%20Contact%20Email%3A%0D%0ACover%20Image%20URL%20(optional)%3A"
+  mail_body: "%3Cb%3EPlease%20fill%20out%20the%20following%3C%2Fb%3E%0D%0A%0D%0AVenue%20Name%3A%0D%0AAddress%3A%0D%0AVoucher%20Link%20or%20Contact%20Email%3A%0D%0ACover%20Image%20URL%20(optional)%3A"
 
 # Pagination
 paginate: 12
