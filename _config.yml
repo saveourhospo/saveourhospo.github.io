@@ -10,6 +10,10 @@ settings:
   img_placeholder: "https://source.unsplash.com/collection/2455617"
   rss: false
 
+# Navigation Links
+navigation:
+  - {name: 'About', link: '/about'}
+
 # Social Media Links
 social:
   instagram: "https://www.instagram.com/cvgellhorn/"

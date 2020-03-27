@@ -2,6 +2,13 @@
     <div class="container">
         <div class="header-inner">
             <a class="logo" href="{{ '/' | relative_url }}" class="header-title">{{ site.settings.title }}</a>
+            <nav class="header-links">
+                {% for item in site.navigation %}
+                <a class="header-link" href="{{ item.link | relative_url }}" itemprop="url">
+                    <span itemprop="name">{{ item.name }}</span>
+                </a>
+                {% endfor %}
+            </nav>
         </div>
     </div>
 </header>

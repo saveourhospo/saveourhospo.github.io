@@ -67,12 +67,36 @@ header {
             letter-spacing: 1px;
             text-decoration: none;
         }
+
+        .header-links {
+            display: flex;
+            width: auto;
+            height: 100%;
+
+            a.header-link {
+                display: flex;
+                align-items: center;
+                border-bottom: 0;
+                height: 100%;
+                padding: 0 10px;
+                text-decoration: none;
+                color: $color-white;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
     }
+}
+
+.home {
+    padding-top: 2.25rem;
 }
 
 .content {
     background-color: $color-blog-bg;
-    padding-top: 2em;
 
     .posts {
         display: flex;
