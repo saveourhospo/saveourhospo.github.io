@@ -26,12 +26,14 @@ translations:
   follow_instagram: "Follow us on Instagram"
   follow_twitter: "Follow us on Twitter"
   subscribe_rss: "Subscribe to our RSS"
-  prev_page: "Previous Page"
+  prev_page: "Prev Page"
   next_page: "Next Page"
+  no_result: "We couldn’t find any locations matching"
+  donate: "Donate"
 
 # Pagination
 paginate: 12
-paginate_path: "blog/page:num"
+paginate_path: "locations/:num"
 
 # Plugins
 plugins:

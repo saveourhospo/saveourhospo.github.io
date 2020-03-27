@@ -7,7 +7,8 @@
         "description": "{{ post.description }}",
         "address": "{{ post.address }}",
         "image": "{{ post.image }}",
-        "link": "{{ post.link }}"
+        "link": "{{ post.link }}",
+        "html": {{ post.output | jsonify }}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
