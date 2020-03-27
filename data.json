@@ -4,7 +4,6 @@
   {% for post in site.posts %}
     {
         "title": "{{ post.title | escape }}",
-        "description": "{{ post.description }}",
         "address": "{{ post.address }}",
         "image": "{{ post.image }}",
         "link": "{{ post.link }}",
