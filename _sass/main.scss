@@ -216,8 +216,8 @@ header {
 
             &:hover,
             &:focus {
-              border-bottom: 0;
-              box-shadow: 0 2px 40px 0 hsla(232, 8%, 63%, .3);
+                border-bottom: 0;
+                box-shadow: 0 2px 40px 0 hsla(232, 8%, 63%, .3);
             }
 
             @include breakpoint($md) {
@@ -300,6 +300,12 @@ header {
                     border: 1px solid darken($color-green, 5%);
                     background-color: $color-green;
                     color: $color-white;
+                    transition: background-color 250ms ease, border 250ms ease;
+
+                    &:hover {
+                        background-color: darken($color-green, 10%);
+                        border: 1px solid darken($color-green, 15%);
+                    }
                 }
             }
         }
