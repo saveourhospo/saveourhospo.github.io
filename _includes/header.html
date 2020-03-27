@@ -8,6 +8,9 @@
                     <span itemprop="name">{{ item.name }}</span>
                 </a>
                 {% endfor %}
+                <a class="header-link add-business" href="mailto:{{ site.settings.email }}?subject={{ site.translations.mail_subject }}&body={{ site.translations.mail_body }}">
+                    <span itemprop="name">{{ site.translations.mail_add_business }}</span>
+                </a>
             </nav>
         </div>
     </div>

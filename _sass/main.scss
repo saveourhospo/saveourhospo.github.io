@@ -50,13 +50,14 @@ body {
 
 .header-info {
     background-color: darken($color-green, 10%);
-    padding: 50px 0;
+    padding: 2.25rem 0;
     text-align: center;
     color: $color-white;
 
     h2 {
         font-size: 2em;
         font-weight: normal;
+        margin: 0;
     }
 }
 
@@ -87,6 +88,7 @@ header {
             display: flex;
             width: auto;
             height: 100%;
+            align-items: center;
 
             a.header-link {
                 display: flex;
@@ -100,6 +102,15 @@ header {
 
                 &:hover {
                     background-color: rgba($color-white, 0.2);
+                }
+
+                &.add-business {
+                    height: 60%;
+                    background-color: $color-white;
+                    color: $color-gray;
+                    border-radius: 20px;
+                    margin-left: 10px;
+                    font-size: 14px;
                 }
             }
         }

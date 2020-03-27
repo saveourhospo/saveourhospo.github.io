@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "About"
-permalink: about.html
+title: "FAQ"
+permalink: faq.html
 ---
 {% assign mailParts = site.settings.email | split: "" %}
 <div class="about">

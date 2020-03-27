@@ -2,17 +2,17 @@
 baseurl: ""
 url: "https://saveourhospo.github.io/"
 
-# Page Settings
+# Site Settings
 settings:
   title: "SaveOurHospo"
-  description: "Save your favourite Sydney Restaurants, Cafes and Places by buying gift cards"
+  description: "Help save your favourite restaurants, cafés and other venues by buying a voucher."
   email: "saveourhospo@gmail.com"
   img_placeholder: "https://source.unsplash.com/collection/2455617"
   rss: false
 
 # Navigation Links
 navigation:
-  - {name: 'About', link: '/about'}
+  - {name: 'FAQ', link: '/faq'}
 
 # Social Media Links
 social:
@@ -28,9 +28,12 @@ translations:
   subscribe_rss: "Subscribe to our RSS"
   prev_page: "Prev Page"
   next_page: "Next Page"
-  no_result: "We couldn’t find any locations matching"
-  info: "Help save your favourite restaurants, cafes and other places by buying gift cards."
-  donate: "Donate"
+  search_placeholder: "Search Venues..."
+  no_result: "We couldn’t find any venues matching"
+  donate: "Get a Voucher"
+  mail_add_business: "Add Venue"
+  mail_subject: "New%20Venue%20%5Bnew_venue%5D"
+  mail_body: "%3Cb%3EPlease%20fill%20out%20the%20following%3C%2Fb%3E%0D%0A%0D%0AVenue%20Name%3A%0D%0AAddress%3A%0D%0ADonation%20Link%20or%20Contact%20Email%3A%0D%0ACover%20Image%20URL%20(optional)%3A"
 
 # Pagination
 paginate: 12

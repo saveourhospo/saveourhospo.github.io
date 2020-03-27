@@ -1,5 +1,5 @@
 <div class="post-card">
-    <a class="post-card-wrapper" href="{{ post.link }}">
+    <a class="post-card-wrapper" href="{{ post.link }}" target="_blank">
         <div class="image-wrapper">
             {% if post.image %}
                 {% assign src = post.image %}
@@ -15,6 +15,6 @@
         </div>
     </a>
     <div class="post-card-footer">
-        <a href="{{ post.link }}">{{ site.translations.donate }}</a>
+        <a href="{{ post.link }}" target="_blank">{{ site.translations.donate }}</a>
     </div>
 </div>
