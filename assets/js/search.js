@@ -18,6 +18,11 @@ var sjs = SimpleJekyllSearch({
 });
 
 function runSearch(event) {
+    // ENTER
+    if (event.keyCode === 13) {
+        searchInput.blur();
+    }
+
     // ESC
     if (event.keyCode === 27) {
         searchInput.value = '';
