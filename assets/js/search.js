@@ -5,6 +5,7 @@ var searchInput = document.getElementById('search-input');
 var postContainer = document.getElementById('post-container');
 var resultContainer = document.getElementById('post-result-container');
 var postPager = document.getElementById('post-pager');
+var value = '';
 
 var sjs = SimpleJekyllSearch({
     success: function() {},
@@ -16,10 +17,9 @@ var sjs = SimpleJekyllSearch({
     limit: 12
 });
 
-var value = '';
-searchInput.addEventListener('keyup', function(event) {
+function runSearch(event) {
     // ESC
-    if (event.keyCode == 27) {
+    if (event.keyCode === 27) {
         searchInput.value = '';
         searchInput.blur();
     }
@@ -37,7 +37,10 @@ searchInput.addEventListener('keyup', function(event) {
 
     sjs.search(value);
     return false;
-});
+}
+
+searchInput.addEventListener('keyup', runSearch);
+searchInput.addEventListener('search', runSearch);
 searchInput.addEventListener('focus', function() {
     inputWrapper.classList.add('focused');
 });
