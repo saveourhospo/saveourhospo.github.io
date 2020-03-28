@@ -1,6 +1,7 @@
 # Config
 baseurl: ""
 url: "https://saveourhospo.github.io/"
+host: 0.0.0.0
 
 # Site Settings
 settings:
