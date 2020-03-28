@@ -1,3 +1,37 @@
 .hidden {
     display: none !important;
 }
+
+.container {
+    padding: 0 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 36em) {
+    .container {
+        margin: 0 auto;
+        max-width: 540px;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .container {
+        margin: 0 auto;
+        max-width: 720px;
+    }
+}
+
+@media only screen and (min-width: 62em) {
+    .container {
+        margin: 0 auto;
+        max-width: 960px;
+    }
+}
+
+@media only screen and (min-width: 75em) {
+    .container {
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+}
