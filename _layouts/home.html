@@ -3,10 +3,12 @@ layout: default
 ---
 <div class="home">
     <div id="search" class="search-wrapper">
-        <label for="search-input" class="search-input-append">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </label>
-        <input id="search-input" type="search" value="" class="form-control" placeholder="{{ site.translations.search_placeholder }}" />
+        <form action="." onsubmit="event.preventDefault()">
+            <label for="search-input" class="search-input-append">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </label>
+            <input id="search-input" type="search" value="" class="form-control" placeholder="{{ site.translations.search_placeholder }}" />
+        </form>
     </div>
 
     <div id="post-container" class="posts">

@@ -106,16 +106,24 @@ header {
             box-shadow: 0 2px 20px 0 rgba(153, 155, 168, 0.3);
         }
 
-        input {
+        form {
             display: flex;
-            height: 100%;
             width: 100%;
-            border: none;
-            outline: none;
-        }
+            height: 100%;
+            align-items: center;
 
-        .search-input-append {
-            margin-right: 10px;
+            input {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                border: none;
+                outline: none;
+                -webkit-appearance: none;
+            }
+    
+            .search-input-append {
+                margin-right: 10px;
+            }
         }
     }
 
