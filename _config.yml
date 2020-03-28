@@ -20,9 +20,10 @@ social:
 
 # Translations
 translations:
-  fork_github: "Fork this project on GitHub"
-  follow_instagram: "Follow us on Instagram"
-  follow_twitter: "Follow us on Twitter"
+  social:
+    github: "Fork this project on GitHub"
+    instagram: "Follow us on Instagram"
+    twitter: "Follow us on Twitter"
   subscribe_rss: "Subscribe to our RSS"
   prev_page: "Prev Page"
   next_page: "Next Page"
