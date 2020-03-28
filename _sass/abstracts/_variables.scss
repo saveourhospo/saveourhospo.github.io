@@ -1,14 +1,22 @@
-// Colors
+// Main Colors
 $color-white: #ffffff;
 $color-green: #1ABC9C;
-$color-gray: #444444;
-$color-gray-light: #7A7A7A;
+$color-green-dark: darken($color-green, 10%);
+
+// Backgrounds Colors
+$color-bg-gray-light: #f9f9f9;
+
+// Border Colors
 $color-border-gray: #f0f0f0;
-$color-blog-bg: #f9f9f9;
+$color-border-green-darken-5: darken($color-green, 5%);
+$color-border-green-darken-15: darken($color-green, 15%);
+
+// Font Colors
+$color-font-gray: #444444;
+$color-font-gray-light: #7A7A7A;
 
 // Font
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-$font-color-light-gray: #838c8d;
 
 // Breakpoints
 $xs: 0;

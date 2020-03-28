@@ -1,0 +1,20 @@
+footer {
+    padding: 2.8em 0;
+    border-top: 1px solid $color-border-gray;
+    text-align: center;
+    font-size: 0.875rem;
+
+    nav.social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 200px;
+
+        a {
+            margin: 0 10px;
+            font-size: 2em;
+            color: $color-font-gray-light;
+        }
+    }
+}

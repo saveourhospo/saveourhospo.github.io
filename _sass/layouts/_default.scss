@@ -1,0 +1,16 @@
+.content {
+    background-color: $color-bg-gray-light;
+
+    .header-info {
+        background-color: $color-green-dark;
+        padding: 2.25rem 0;
+        text-align: center;
+        color: $color-white;
+    
+        h2 {
+            font-size: 2em;
+            font-weight: normal;
+            margin: 0;
+        }
+    }
+}

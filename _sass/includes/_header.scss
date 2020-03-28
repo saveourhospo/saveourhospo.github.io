@@ -1,0 +1,55 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: $color-green;
+    z-index: 9;
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 3.75em;
+
+        a.logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: $color-white;
+            font-size: 1.5em;
+            font-weight: 200;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .header-links {
+            display: flex;
+            width: auto;
+            height: 100%;
+            align-items: center;
+
+            a.header-link {
+                display: flex;
+                align-items: center;
+                border-bottom: 0;
+                height: 100%;
+                padding: 0 15px;
+                text-decoration: none;
+                color: $color-white;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: rgba($color-white, 0.2);
+                }
+
+                &.add-business {
+                    height: 60%;
+                    background-color: $color-white;
+                    color: $color-font-gray;
+                    border-radius: 20px;
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

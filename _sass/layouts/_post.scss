@@ -1,0 +1,106 @@
+.post-card {
+    position: relative;
+    min-height: 250px;
+    border-radius: 4px;
+    background-color: $color-white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2.25rem;
+    transition: box-shadow 250ms ease;
+    overflow: hidden;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        border-bottom: 0;
+        box-shadow: 0 2px 40px 0 hsla(232, 8%, 63%, .3);
+    }
+
+    @include breakpoint($md) {
+        width: 48.4375%;
+        margin-right: 3.125%;
+    
+        &:last-of-type,
+        &:nth-child(2n+2) {
+            margin-right: 0;
+        }
+    }
+    
+    @include breakpoint($xl) {
+        width: 31.25%;
+        margin-right: 3.125%;
+    
+        &:nth-child(2n+2) {
+            margin-right: 3.125%;
+        }
+    
+        &:last-of-type,
+        &:nth-child(3n+3) {
+            margin-right: 0;
+        }
+    }
+
+    .post-card-wrapper {
+        color: $color-font-gray-light;
+        text-decoration: none;
+
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 180px;
+
+            img {
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .post-card-wrapper-info {
+            padding: 20px;
+
+            h2 {
+                margin-top: 0;
+                color: $color-font-gray;
+            }
+
+            span {
+                font-size: 0.875rem;
+            }
+
+            p {
+                font-size: 1rem;
+                margin-bottom: 0;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .post-card-footer {
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        border-top: 1px solid $color-border-gray;
+        background: rgba($color-border-gray, 0.3);
+
+        a {
+            display: block;
+            padding: 10px 0;
+            width: 80%;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid $color-border-green-darken-5;
+            background-color: $color-green;
+            color: $color-white;
+            transition: background-color 250ms ease, border 250ms ease;
+
+            &:hover {
+                background-color: $color-green-dark;
+                border: 1px solid $color-border-green-darken-15;
+            }
+        }
+    }
+}
