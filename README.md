@@ -1,7 +1,7 @@
 SaveOurHospo
 ===========
 
-This is a Jekyll | GitHub Pages based project to help out our favourite restaurants, cafés and other venues in these devastating times of the COVID-19 Virus.
+> This is a Jekyll | GitHub Pages based project to help out our favourite restaurants, cafés and other venues in these devastating times of the COVID-19 Virus.
 
 ## Adding a venue
 You can add your own venue by creating a pull request and adding a new jekyll post (new markup file under _posts) with the following data:
