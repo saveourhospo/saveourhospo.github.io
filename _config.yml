@@ -11,6 +11,15 @@ settings:
   img_placeholder: "https://source.unsplash.com/collection/2455617"
   rss: false
 
+# Front Matter Defaults
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+
 # Navigation Links
 navigation:
   - {name: 'FAQ', link: '/faq'}
