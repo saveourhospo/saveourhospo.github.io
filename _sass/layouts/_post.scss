@@ -1,4 +1,7 @@
 .post-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
     min-height: 250px;
     border-radius: 4px;
@@ -40,6 +43,8 @@
     }
 
     .post-card-wrapper {
+        display: block;
+        height: 100%;
         color: $color-font-gray-light;
         text-decoration: none;
 
