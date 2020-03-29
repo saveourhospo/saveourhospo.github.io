@@ -1,39 +1,46 @@
 ---
 layout: default
 ---
-<div class="home">
-    <div id="search" class="search-wrapper">
-        <form action onsubmit="event.preventDefault()">
-            <label for="search-input" class="search-input-append">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </label>
-            <input id="search-input" type="search" value="" class="form-control" placeholder="{{ site.translations.search_placeholder }}" />
-        </form>
+<div class="header-info">
+    <div class="container">
+        <h2>{{ site.settings.description }}</h2>
     </div>
-
-    <div id="post-container" class="posts">
-        {% for post in paginator.posts %}
-            {{ post }}
-        {% endfor %}
-    </div>
-    <div id="post-result-container" class="posts"></div>
-
-    <div id="post-pager">
-        {% if paginator.total_pages > 1 %}
-        <div class="pagination">
-            {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}" class="button">
-                <i class="fa fa-chevron-left"></i>
-                <span>{{ site.translations.prev_page }}</span>
-            </a>
-            {% endif %}
-            {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}" class="button">
-                <span>{{ site.translations.next_page }}</span>
-                <i class="fa fa-chevron-right"></i>
-            </a>
-            {% endif %}
+</div>
+<div class="container">
+    <div class="home">
+        <div id="search" class="search-wrapper">
+            <form action onsubmit="event.preventDefault()">
+                <label for="search-input" class="search-input-append">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <input id="search-input" type="search" value="" class="form-control" placeholder="{{ site.translations.search_placeholder }}" />
+            </form>
         </div>
-        {% endif %}
-    </div> 
+
+        <div id="post-container" class="posts">
+            {% for post in paginator.posts %}
+                {{ post }}
+            {% endfor %}
+        </div>
+        <div id="post-result-container" class="posts"></div>
+
+        <div id="post-pager">
+            {% if paginator.total_pages > 1 %}
+            <div class="pagination">
+                {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}" class="button">
+                    <i class="fa fa-chevron-left"></i>
+                    <span>{{ site.translations.prev_page }}</span>
+                </a>
+                {% endif %}
+                {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}" class="button">
+                    <span>{{ site.translations.next_page }}</span>
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div> 
+    </div>
 </div>
