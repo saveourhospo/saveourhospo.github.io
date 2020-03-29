@@ -1,14 +1,12 @@
 <div class="post-card">
     <a class="post-card-wrapper" href="{{ post.link }}" target="_blank">
-        <div class="image-wrapper">
-            {% if post.image %}
-                {% assign src = post.image %}
-            {% else %}
-                {% assign random = "1,2,3,4,5,6,7,8,9" | split: "," | sample: 3 | join: "" %}
-                {% assign src = site.settings.img_placeholder | append: "/" | append: random %}
-            {% endif %}
-            <img src="{{ src }}" alt="{{ post.title }}">
-        </div>
+        {% if post.image %}
+            {% assign src = post.image %}
+        {% else %}
+            {% assign random = "1,2,3,4,5,6,7,8,9" | split: "," | sample: 3 | join: "" %}
+            {% assign src = site.settings.img_placeholder | append: "/" | append: random %}
+        {% endif %}
+        <div class="image-wrapper" style="background-image: url({{ src }})"></div>
         <div class="post-card-wrapper-info">
             <h2>{{ post.title }}</h2>
             <span>{{ post.address }}</span>

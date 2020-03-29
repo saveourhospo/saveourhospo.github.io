@@ -44,18 +44,10 @@
         text-decoration: none;
 
         .image-wrapper {
-            position: relative;
-            overflow: hidden;
             height: 180px;
-
-            img {
-                position: absolute;
-                display: block;
-                top: 50%;
-                left: 0;
-                width: 100%;
-                transform: translateY(-50%);
-            }
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .post-card-wrapper-info {
