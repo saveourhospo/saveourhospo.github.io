@@ -8,9 +8,19 @@
         color: $color-white;
     
         h2 {
+            display: inline-block;
+            width: 100%;
             font-size: 2em;
             font-weight: normal;
             margin: 0;
+
+            @include breakpoint($md) {
+                width: 70%;
+            }
+
+            @include breakpoint($xl) {
+                width: 70%;
+            }
         }
     }
 }
