@@ -1,0 +1,6 @@
+---
+title:  "Good Vibes Only"
+address: "26b Sussex Street, Barangaroo, NSW 2000"
+link: "https://heyyou.com.au/restaurant/4764/good-vibes-only"
+image: "https://lh3.googleusercontent.com/bKBOcg72m0rIaMK6gNqadC64bLOVmAcCStD6qatBYdTjXEH8Hyl3SXRmp4eiv44IgcRkWv5i=w1080-h608-p-no-v0"
+---
