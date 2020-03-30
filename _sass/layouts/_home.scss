@@ -62,13 +62,14 @@
         justify-content: center;
         height: 50px;
         padding-bottom: 20px;
+        margin: 0 -20px;
 
         a, em {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100%;
-            min-width: 40px;
+            min-width: 30px;
             margin: 0 5px;
             border-radius: 4px;
             color: $color-font-gray-light;
