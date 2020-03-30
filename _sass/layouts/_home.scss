@@ -63,15 +63,19 @@
         height: 50px;
         padding-bottom: 20px;
 
-        a {
+        a, em {
             display: flex;
             align-items: center;
+            justify-content: center;
             height: 100%;
+            min-width: 40px;
             margin: 0 5px;
-            padding: 0 10px;
             border-radius: 4px;
-            text-decoration: none;
             color: $color-font-gray-light;
+        }
+
+        a {
+            text-decoration: none;
             background-color: $color-white;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
             transition: box-shadow 250ms ease;
@@ -79,14 +83,12 @@
             &:hover {
                 box-shadow: 0 2px 10px 0 rgba(153, 155, 168, 0.3);
             }
+        }
 
-            i.fa-chevron-left {
-                margin-right: 10px;
-            }
-
-            i.fa-chevron-right {
-                margin-left: 10px;
-            }
+        em {
+            background-color: $color-bg-gray-light;
+            border: 1px solid $color-border-gray;
+            font-style: normal;
         }
     }
 }

@@ -14,7 +14,7 @@ var sjs = SimpleJekyllSearch({
     searchResultTemplate: '{html}',
     noResultsText: '<div class="post-search-no-result"><h3>{{ site.translations.no_result }}</h3></div>',
     json: '/data.json',
-    limit: 12
+    limit: 6
 });
 
 function runSearch(event) {

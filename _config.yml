@@ -35,8 +35,6 @@ translations:
     instagram: "Follow us on Instagram"
     twitter: "Follow us on Twitter"
   subscribe_rss: "Subscribe to our RSS"
-  prev_page: "Prev Page"
-  next_page: "Next Page"
   search_placeholder: "Search Venues..."
   no_result: "We couldn’t find any matching venues"
   voucher_link: "Help Out"
@@ -47,7 +45,7 @@ translations:
 
 # Pagination
 paginate: 12
-paginate_path: "locations/:num"
+paginate_path: "page/:num"
 
 # Plugins
 plugins:

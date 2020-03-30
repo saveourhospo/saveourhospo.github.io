@@ -28,14 +28,34 @@ layout: default
             {% if paginator.total_pages > 1 %}
             <div class="pagination">
                 {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}" class="button">
+                <a href="{{ paginator.previous_page_path | relative_url }}" class="button">
                     <i class="fa fa-chevron-left"></i>
-                    <span>{{ site.translations.prev_page }}</span>
                 </a>
                 {% endif %}
+
+                {% if paginator.page > 2 %}
+                    {% assign offset = paginator.page | minus:3 %}
+                    {% assign pages_left = paginator.total_pages | minus:offset %}
+
+                    {% if pages_left <  5 %}
+                        {% assign offset = paginator.total_pages | minus:5 %}
+                    {% endif %}
+                {% else %}
+                    {% assign offset =  0 %}
+                {% endif %}
+
+                {% for page in (1..paginator.total_pages) limit:5 offset:offset %}
+                    {% if page == paginator.page %}
+                    <em>{{ page }}</em>
+                    {% elsif page == 1 %}
+                    <a href="{{ '/' | relative_url }}">{{ page }}</a>
+                    {% else %}
+                    <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+                    {% endif %}
+                {% endfor %}
+
                 {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}" class="button">
-                    <span>{{ site.translations.next_page }}</span>
+                <a href="{{ paginator.next_page_path | relative_url }}" class="button">
                     <i class="fa fa-chevron-right"></i>
                 </a>
                 {% endif %}
