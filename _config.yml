@@ -39,10 +39,11 @@ translations:
   next_page: "Next Page"
   search_placeholder: "Search Venues..."
   no_result: "We couldn’t find any matching venues"
-  donate: "Help Out"
+  voucher_link: "Help Out"
+  delivery_link: "Online Delivery"
   mail_add_business: "Add Venue"
   mail_subject: "SOH%20-%20New%20Venue"
-  mail_body: "%3Cb%3EPlease%20fill%20out%20the%20following%3C%2Fb%3E%0D%0A%0D%0AVenue%20Name%3A%0D%0AAddress%3A%0D%0AVoucher%20Link%20or%20Contact%20Email%3A%0D%0ACover%20Image%20URL%20(optional)%3A"
+  mail_body: "%3Cb%3EPlease%20fill%20out%20the%20following%3C%2Fb%3E%0D%0A%0D%0AVenue%20Name%3A%20%0D%0AVenue%20Address%3A%20%0D%0AVoucher%20or%20Donation%20Link%3A%20%0D%0AOnline%20Delivery%20Link%20(optional)%3A%0D%0ACover%20Image%20URL%20(optional)%3A%0D%0A%0D%0ADon't%20use%20copyright%20protected%20images%20without%20permission."
 
 # Pagination
 paginate: 12

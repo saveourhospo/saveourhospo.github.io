@@ -19,15 +19,17 @@ Example: `2020-03-29-my-cafe.md`
 ---
 title:  "NAME"
 address: "ADDRESS"
-link: "VOUCHER_LINK"
+voucher_link: "VOUCHER_LINK"
+delivery_link: "DELIVERY_LINK"
 image: "IMAGE_URL_OPTIONAL"
 ---
 ```
 
 - **title:** Name of the venue
 - **address:** Venue address
-- **link:** Link to voucher, delivery service or donation page
-- **image:** Cover image URL (optional)
+- **voucher_link:** Link to voucher or donation page
+- **delivery_link:** Link to delivery service (optional)
+- **image:** Cover image URL (optional) - Don't use copyright protected images without premission
 
 # Fork this project
 You are more than welcome to fork this project and help out venues in your city or region.
