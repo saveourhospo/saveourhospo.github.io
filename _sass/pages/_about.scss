@@ -1,0 +1,20 @@
+.about {
+    padding: 1em 0;
+
+    a {
+        color: $color-green;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-green-dark;
+        }
+    }
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    .faq-answer {
+        padding-left: 20px;
+    }
+}

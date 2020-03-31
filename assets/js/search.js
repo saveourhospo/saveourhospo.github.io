@@ -5,7 +5,7 @@ var searchInput = document.getElementById('search-input');
 var postContainer = document.getElementById('post-container');
 var resultContainer = document.getElementById('post-result-container');
 var postPager = document.getElementById('post-pager');
-var value = '';
+var searchValue = '';
 
 var sjs = SimpleJekyllSearch({
     success: function() {},
@@ -29,18 +29,18 @@ function runSearch(event) {
         searchInput.blur();
     }
     
-    if (value === event.target.value) {
+    if (searchValue === event.target.value) {
         return false;
     } else {
-        value = event.target.value;
+        searchValue = event.target.value;
     }
     
-    var cond = !!value;
+    var cond = !!searchValue;
     postPager.classList.toggle('hidden', cond);
     postContainer.classList.toggle('hidden', cond);
     resultContainer.classList.toggle('hidden', !cond);
 
-    sjs.search(value);
+    sjs.search(searchValue);
     return false;
 }
 

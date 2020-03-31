@@ -8,10 +8,16 @@
                     <span itemprop="name">{{ item.name }}</span>
                 </a>
                 {% endfor %}
-                <a class="header-link add-business" href="mailto:{{ site.settings.email }}?subject={{ site.translations.mail_subject }}&body={{ site.translations.mail_body }}">
+                <a id="mailto-link" class="header-link add-business" data-subject="{{ site.translations.mail_subject }}" data-body="{{ site.translations.mail_body }}">
                     <span itemprop="name">{{ site.translations.mail_add_business }}</span>
                 </a>
             </nav>
         </div>
     </div>
 </header>
+<script>
+    var mailtoLink = document.getElementById('mailto-link');
+    window.decMail = '{{ site.settings.email_rot13 }}'.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
+
+    mailtoLink.href = 'mailto:' + window.decMail + '?subject=' + mailtoLink.dataset.subject + '&body=' + mailtoLink.dataset.body;
+</script>

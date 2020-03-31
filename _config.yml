@@ -7,7 +7,7 @@ host: 0.0.0.0
 settings:
   title: "SaveOurHospo"
   description: "Help save your favourite restaurants, cafés and other venues by buying a voucher or order home delivery."
-  email: "saveourhospo@gmail.com"
+  email_rot13: "fnirbheubfcb@tznvy.pbz" #saveourhospo@gmail.com
   img_placeholder: "https://source.unsplash.com/collection/2455617"
   rss: false
 
@@ -22,7 +22,7 @@ defaults:
 
 # Navigation Links
 navigation:
-  - {name: 'FAQ', link: '/faq'}
+  - {name: 'About', link: '/about'}
 
 # Social Media Links
 social:
