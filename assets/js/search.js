@@ -5,7 +5,22 @@ var searchInput = document.getElementById('search-input');
 var postContainer = document.getElementById('post-container');
 var resultContainer = document.getElementById('post-result-container');
 var postPager = document.getElementById('post-pager');
-var searchValue = '';
+var searchQuery = '';
+
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
 
 var sjs = SimpleJekyllSearch({
     success: function() {},
@@ -17,7 +32,11 @@ var sjs = SimpleJekyllSearch({
     limit: 6
 });
 
-function runSearch(event) {
+var sendSearchData = debounce(function(q) {
+    gtag('event', 'search', { search_term: q });
+}, 500);
+
+function runSearch (event) {
     // ENTER
     if (event.keyCode === 13) {
         searchInput.blur();
@@ -29,20 +48,21 @@ function runSearch(event) {
         searchInput.blur();
     }
     
-    if (searchValue === event.target.value) {
+    if (searchQuery === event.target.value) {
         return false;
     } else {
-        searchValue = event.target.value;
+        searchQuery = event.target.value;
     }
     
-    var cond = !!searchValue;
+    var cond = !!searchQuery;
     postPager.classList.toggle('hidden', cond);
     postContainer.classList.toggle('hidden', cond);
     resultContainer.classList.toggle('hidden', !cond);
 
-    sjs.search(searchValue);
+    sjs.search(searchQuery);
+    sendSearchData(searchQuery);
     return false;
-}
+};
 
 searchInput.addEventListener('keyup', runSearch);
 searchInput.addEventListener('search', runSearch);
