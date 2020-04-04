@@ -20,7 +20,7 @@ Example: `2020-03-29-my-cafe.md`
 title:  "NAME"
 address: "ADDRESS"
 voucher_link: "VOUCHER_LINK"
-delivery_link: "DELIVERY_LINK"
+delivery_link: "DELIVERY_LINK_OPTIONAL"
 image: "IMAGE_URL_OPTIONAL"
 ---
 ```
