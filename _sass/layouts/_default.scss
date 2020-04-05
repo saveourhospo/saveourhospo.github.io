@@ -17,10 +17,6 @@
             @include breakpoint($md) {
                 width: 70%;
             }
-
-            @include breakpoint($xl) {
-                width: 70%;
-            }
         }
     }
 }

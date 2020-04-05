@@ -1,7 +1,10 @@
 <header class="header">
     <div class="container">
         <div class="header-inner">
-            <a class="logo" href="{{ '/' | relative_url }}" class="header-title">{{ site.settings.title }}</a>
+            <a class="logo" href="{{ '/' | relative_url }}" class="header-title">
+                <i class="fas fa-heart"></i>
+                <span>{{ site.settings.title }}</span>
+            </a>
             <nav class="header-links">
                 {% for item in site.navigation %}
                 <a class="header-link" href="{{ item.link | relative_url }}" itemprop="url">
