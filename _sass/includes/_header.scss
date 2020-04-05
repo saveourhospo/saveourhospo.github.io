@@ -15,8 +15,7 @@ header {
             align-items: center;
             height: 100%;
             color: $color-white;
-            font-size: 1.2em;
-            font-weight: 200;
+            font-size: 1rem;
             letter-spacing: 1px;
             text-decoration: none;
 
@@ -55,8 +54,12 @@ header {
                     background-color: $color-white;
                     color: $color-font-gray;
                     border-radius: 20px;
-                    margin-left: 10px;
+                    margin-left: 5px;
                     font-size: 14px;
+
+                    @include breakpoint($md) {
+                        margin-left: 10px;
+                    }
                 }
             }
         }
