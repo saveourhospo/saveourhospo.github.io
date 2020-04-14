@@ -7,20 +7,14 @@
             </a>
             <nav class="header-links">
                 {% for item in site.navigation %}
-                <a class="header-link" href="{{ item.link | relative_url }}" itemprop="url">
+                <a href="{{ item.link | relative_url }}" class="header-link" itemprop="url">
                     <span itemprop="name">{{ item.name }}</span>
                 </a>
                 {% endfor %}
-                <a id="mailto-link" class="header-link add-business" data-subject="{{ site.translations.mail_subject }}" data-body="{{ site.translations.mail_body }}">
+                <a href="{{ site.settings.google_form }}" target="_blank" class="header-link add-business"">
                     <span itemprop="name">{{ site.translations.mail_add_business }}</span>
                 </a>
             </nav>
         </div>
     </div>
 </header>
-<script>
-    var mailtoLink = document.getElementById('mailto-link');
-    window.decMail = '{{ site.settings.email_rot13 }}'.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
-
-    mailtoLink.href = 'mailto:' + window.decMail + '?subject=' + mailtoLink.dataset.subject + '&body=' + mailtoLink.dataset.body;
-</script>

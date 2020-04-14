@@ -34,7 +34,7 @@ var sjs = SimpleJekyllSearch({
 
 var sendSearchData = debounce(function(q) {
     gtag('event', 'search', { search_term: q });
-}, 500);
+}, 2000);
 
 function runSearch (event) {
     // ENTER
