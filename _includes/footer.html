@@ -3,13 +3,13 @@
         <nav class="social">
             {% for item in site.social %}
             {% assign key = item[0] %}
-            <a href="{{ item[1] }}" title="{{ site.translations.social[key] }}">
+            <a href="{{ item[1] }}" title="{{ site.translations.social[key] }}" target="_blank">
                 <i class="fab fa-fw fa-{{ key }}"></i>
             </a>
             {% endfor %}
 
             {% if site.settings.rss %}
-            <a href="{{ "/feed.xml" | relative_url }}" title="{{ site.translations.subscribe_rss }}">
+            <a href="{{ "/feed.xml" | relative_url }}" title="{{ site.translations.subscribe_rss }}" target="_blank">
                 <i class="fas fa-fw fa-rss"></i>
             </a>
             {% endif %}
