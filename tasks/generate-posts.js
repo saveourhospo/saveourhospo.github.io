@@ -8,31 +8,39 @@ const credentials = require('../saveourhospo-credentials.json');
 const postsPath = path.join(__dirname, '..', '_posts');
 const googlSheetId = '1BtTaOv_q6REnW_Zn1d_2WUyNi-tR1UninRLIY3M6TfM';
 
+function getFileName(item, djDate) {
+    let nameParts = [
+        djDate.format('YYYY-MM-DD'),
+        djDate.unix(),
+        item.Name.split(' ').map(n => n.toLowerCase()).join('-'),
+    ];
+
+    return `${nameParts.join('-')}.md`;
+}
+
+function getFileData(item, djDate) {
+    let data = [
+        '---',
+        `date: "${djDate.format('YYYY-MM-DD HH:mm:ss')}"`,
+        `title: "${item['Name']}"`,
+        `address: "${item['Address']}"`,
+        `city: "${item['City']}"`,
+        `voucher_link: "${item['Voucher / Donation URL']}"`,
+        `delivery_link: "${item['Online Delivery URL']}"`,
+        `image: "${item['Cover Image URL']}"`,
+        '---'
+    ];
+    return data.join('\n');
+}
+
 function createPosts(rows) {
     rows.forEach(function(item) {
         let djDate = dayjs(item.Timestamp);
-
-        let nameParts = [
-            djDate.format('YYYY-MM-DD'),
-            djDate.unix(),
-            item.Name.split(' ').map(n => n.toLowerCase()).join('-'),
-        ];
-        let fileName = `${nameParts.join('-')}.md`;
+        let fileData = getFileData(item, djDate);
+        let fileName = getFileName(item, djDate);
         let filePath = path.join(postsPath, fileName);
 
-        let data = [
-            '---',
-            `date: "${djDate.format('YYYY-MM-DD HH:mm:ss')}"`,
-            `title: "${item['Name']}"`,
-            `address: "${item['Address']}"`,
-            `city: "${item['City']}"`,
-            `voucher_link: "${item['Voucher / Donation URL']}"`,
-            `delivery_link: "${item['Online Delivery URL']}"`,
-            `image: "${item['Cover Image URL']}"`,
-            '---'
-        ];
-
-        fs.writeFile(filePath, data.join('\n'), {flag:'w'}, (err) => {
+        fs.writeFile(filePath, fileData, {flag:'w'}, (err) => {
             if (err)  {
                 console.log(chalk.red(`${fileName}`));
                 throw err;
