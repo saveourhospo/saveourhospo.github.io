@@ -3,8 +3,10 @@
 [
   {% for post in site.posts %}
     {
+        "date": "{{ post.date }}",
         "title": "{{ post.title | escape }}",
         "address": "{{ post.address }}",
+        "city": "{{ post.city }}",
         "voucher_link": "{{ post.voucher_link }}",
         "delivery_link": "{{ post.delivery_link }}",
         "image": "{{ post.image }}",
