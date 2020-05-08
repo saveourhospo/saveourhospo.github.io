@@ -10,23 +10,27 @@ You can add your own venue by creating a pull request and adding a new jekyll po
 
 ### Filename
 ```
-YEAR-MONTH-DAY-venue-name-in-lowercase.md
+YEAR-MONTH-DAY-UNIX_TIMESTAMP-venue-name-in-lowercase.md
 ```
-Example: `2020-03-29-my-cafe.md`
+Example: `2020-03-29-1586860317-my-cafe.md`
 
 ### Content
 ```
 ---
+date:  "YYYY-MM-DD HH:mm:ss"
 title:  "NAME"
 address: "ADDRESS"
+city: "CITY"
 voucher_link: "VOUCHER_LINK"
 delivery_link: "DELIVERY_LINK_OPTIONAL"
 image: "IMAGE_URL_OPTIONAL"
 ---
 ```
 
+- **date:** Date and time for sorting purposes
 - **title:** Name of the venue
 - **address:** Venue address
+- **city:** Venue city
 - **voucher_link:** Link to voucher or donation page
 - **delivery_link:** Link to delivery service (optional)
 - **image:** Cover image URL (optional) - Don't use copyright protected images without premission
