@@ -1,6 +1,6 @@
 <div class="post-card">
     <a class="post-card-wrapper" href="{{ post.voucher_link }}" target="_blank">
-        {% if post.image %}
+        {% if post.image!= "" %}
             {% assign src = post.image %}
         {% else %}
             {% assign random = "1,2,3,4,5,6,7,8,9" | split: "," | sample: 3 | join: "" %}
@@ -14,7 +14,7 @@
     </a>
     <div class="post-card-footer">
         <a href="{{ post.voucher_link }}" target="_blank">{{ site.translations.voucher_link }}</a>
-        {% if post.delivery_link %}
+        {% if post.delivery_link != "" %}
             <a href="{{ post.delivery_link }}" target="_blank">{{ site.translations.delivery_link }}</a>
         {% endif %}
     </div>
