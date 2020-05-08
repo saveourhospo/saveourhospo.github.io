@@ -1,0 +1,17 @@
+{
+  "name": "saveourhospo.github.io",
+  "version": "1.0.0",
+  "description": "SaveOurHospo",
+  "private": true,
+  "scripts": {
+    "dev": "bundle exec jekyll serve",
+    "generate": "node tasks/generate-posts"
+  },
+  "author": "Christoph von Gellhorn",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^4.0.0",
+    "dayjs": "^1.8.26",
+    "google-spreadsheet": "^3.0.11"
+  }
+}

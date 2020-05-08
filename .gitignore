@@ -6,4 +6,9 @@
 Gemfile.lock
 
 ## Directories
+node_modules/
 _site/
+
+## Files
+npm-debug.log
+saveourhospo-credentials.json
