@@ -5,8 +5,8 @@ const dayjs = require('dayjs');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const credentials = require('../saveourhospo-credentials.json');
 
-const postsPath = path.join(__dirname, '..', '_posts');
-const googlSheetId = '1BtTaOv_q6REnW_Zn1d_2WUyNi-tR1UninRLIY3M6TfM';
+const PATH_POSTS = path.join(__dirname, '..', '_posts');
+const GOOGLE_SHEET_ID = '1BtTaOv_q6REnW_Zn1d_2WUyNi-tR1UninRLIY3M6TfM';
 
 function getFileName(item, djDate) {
     let nameParts = [
@@ -38,7 +38,7 @@ function createPosts(rows) {
         let djDate = dayjs(item.Timestamp);
         let fileData = getFileData(item, djDate);
         let fileName = getFileName(item, djDate);
-        let filePath = path.join(postsPath, fileName);
+        let filePath = path.join(PATH_POSTS, fileName);
 
         fs.writeFile(filePath, fileData, {flag:'w'}, (err) => {
             if (err)  {
@@ -51,7 +51,7 @@ function createPosts(rows) {
 }
 
 async function loadSheetRows() {
-    const doc = new GoogleSpreadsheet(googlSheetId);
+    const doc = new GoogleSpreadsheet(GOOGLE_SHEET_ID);
 
     await doc.useServiceAccountAuth(credentials);
     await doc.loadInfo();
