@@ -22,12 +22,12 @@ function getFileData(item, djDate) {
     let data = [
         '---',
         `date: "${djDate.format('YYYY-MM-DD HH:mm:ss')}"`,
-        `title: "${item['Name']}"`,
-        `address: "${item['Address']}"`,
-        `city: "${item['City']}"`,
-        `voucher_link: "${item['Voucher / Donation URL']}"`,
-        `delivery_link: "${item['Online Delivery URL']}"`,
-        `image: "${item['Cover Image URL']}"`,
+        `title: "${item['Name'] || ''}"`,
+        `address: "${item['Address'] || ''}"`,
+        `city: "${item['City'] || ''}"`,
+        `voucher_link: "${item['Voucher / Donation URL'] || ''}"`,
+        `delivery_link: "${item['Online Delivery URL'] || ''}"`,
+        `image: "${item['Cover Image URL'] || ''}"`,
         '---'
     ];
     return data.join('\n');
