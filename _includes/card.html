@@ -14,7 +14,7 @@
     </a>
     <div class="post-card-footer">
         <a href="{{ post.voucher_link }}" target="_blank">{{ site.translations.voucher_link }}</a>
-        {% if post.delivery_link != "" %}
+        {% if post.delivery_link != "" and post.delivery_link != post.voucher_link %}
             <a href="{{ post.delivery_link }}" target="_blank">{{ site.translations.delivery_link }}</a>
         {% endif %}
     </div>
