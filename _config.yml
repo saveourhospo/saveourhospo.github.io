@@ -1,4 +1,4 @@
-# Config
+# Serving
 baseurl: ""
 url: "https://saveourhospo.org/"
 host: 0.0.0.0
@@ -52,13 +52,4 @@ plugins:
   - jekyll-paginate
 
 # Excludes
-exclude:
-  - node_modules
-  - package.json
-  - package-lock.json
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENSE
-  - tasks
-  - saveourhospo-credentials.json
+exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "tasks", "package.json", "package-lock.json", "README.md", "LICENSE", "saveourhospo-credentials.json"]
