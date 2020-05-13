@@ -52,4 +52,13 @@ plugins:
   - jekyll-paginate
 
 # Excludes
-exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "tasks", "package.json", "package-lock.json", "README.md", "LICENSE", "saveourhospo-credentials.json"]
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - tasks
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE
+  - saveourhospo-credentials.json
