@@ -12,6 +12,6 @@
   "devDependencies": {
     "chalk": "^4.0.0",
     "dayjs": "^1.8.26",
-    "google-spreadsheet": "^3.3.0"
+    "google-spreadsheet": "^4.1.1"
   }
 }
